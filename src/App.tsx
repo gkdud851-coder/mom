@@ -154,7 +154,6 @@ export default function App() {
               muted 
               loop 
               playsInline 
-              poster="/시설1.jpg"
               className="w-full h-full object-cover opacity-60"
             >
               <source src="/감동영상.mp4" type="video/mp4" />
