@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Serif+KR:wght@400;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Noto Sans KR", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Noto Serif KR", serif;
+  
+  --color-warm-bg: #fdfcfb;
+  --color-warm-card: #ffffff;
+  --color-lime-brand: #65a30d;
+  --color-lime-soft: #ecfccb;
+  --color-lime-dark: #3f6212;
+  --color-ink: #1a1a1a;
+  --color-ink-muted: #4b5563;
+}
+
+@layer base {
+  body {
+    @apply font-sans text-ink bg-warm-bg antialiased;
+  }
+  
+  h1, h2, h3, h4 {
+    @apply font-serif tracking-tight;
+  }
+}
+
+.pill-image {
+  @apply rounded-[9999px] aspect-[3/4] object-cover;
+}
+
+.warm-card {
+  @apply bg-warm-card rounded-[32px] shadow-sm border border-black/5;
+}
+
+.section-padding {
+  @apply py-20 md:py-32 px-6;
+}
