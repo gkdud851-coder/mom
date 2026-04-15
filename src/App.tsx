@@ -153,7 +153,8 @@ export default function App() {
               autoPlay 
               muted 
               loop 
-              playsInline 
+              playsInline
+              preload="auto"
               className="w-full h-full object-cover opacity-60"
             >
               <source src="/감동영상.mp4" type="video/mp4" />
