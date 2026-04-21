@@ -299,24 +299,58 @@ export default function App() {
         {/* Contact Section */}
         <section id="contact" className="section-padding bg-ink text-white">
           <div className="max-w-3xl mx-auto">
-            <SectionHeader subtitle="Location & Contact" title="언제든 편하게 방문해 주세요" light />
-            <div className="space-y-10">
-              <div className="grid md:grid-cols-2 gap-8">
+            <SectionHeader 
+              subtitle="Location & Contact" 
+              title="언제든 편하게 방문해 주세요" 
+              light 
+            />
+            <div className="space-y-6">
+              <div className="grid md:grid-cols-2 gap-6">
                 <div className="flex items-start gap-6 bg-white/5 p-8 rounded-3xl border border-white/10">
-                  <div className="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center text-lime-300 shrink-0"><MapPin className="w-6 h-6" /></div>
-                  <div><h4 className="text-xl font-bold mb-2">찾아오시는 길</h4><p className="text-white/60 leading-relaxed">전라남도 순천시 충효로 127 2층</p></div>
+                  <div className="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center text-lime-300 shrink-0">
+                    <MapPin className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-bold mb-2">찾아오시는 길</h4>
+                    <p className="text-white/60 leading-relaxed">전라남도 순천시 충효로 127 2층</p>
+                  </div>
                 </div>
                 <div className="flex items-start gap-6 bg-white/5 p-8 rounded-3xl border border-white/10">
-                  <div className="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center text-lime-300 shrink-0"><Clock className="w-6 h-6" /></div>
-                  <div><h4 className="text-xl font-bold mb-2">운영 시간</h4><p className="text-white/60 leading-relaxed">월 - 토 | 08:00 - 18:00<br/>(일요일 휴무)</p></div>
+                  <div className="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center text-lime-300 shrink-0">
+                    <Clock className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-bold mb-2">운영 시간</h4>
+                    <p className="text-white/60 leading-relaxed">월 - 토 | 08:00 - 18:00<br/>(일요일 휴무)</p>
+                  </div>
                 </div>
               </div>
+
+              {/* 전화 상담 큰 배너 */}
               <div className="flex flex-col items-center text-center bg-lime-brand/10 p-10 rounded-[40px] border border-lime-brand/20 group cursor-pointer" onClick={() => window.open('tel:061-742-5888')}>
-                <div className="w-20 h-20 bg-lime-brand rounded-3xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform shadow-2xl shadow-lime-brand/40"><Phone className="w-10 h-10" /></div>
+                <div className="w-20 h-20 bg-lime-brand rounded-3xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform shadow-2xl shadow-lime-brand/40">
+                  <Phone className="w-10 h-10" />
+                </div>
                 <h4 className="text-2xl font-bold mb-2">상담 전화</h4>
                 <p className="text-5xl md:text-6xl font-bold text-lime-300 hover:text-white transition-colors">061-742-5888</p>
                 <p className="text-white/60 mt-4">클릭하면 바로 전화로 연결됩니다</p>
               </div>
+
+              {/* ⭐ 복구된 길찾기 배너 ⭐ */}
+              <button 
+                onClick={() => window.open('https://map.naver.com/p/search/%EC%88%9C%EC%B2%9C%EB%A7%98%ED%8E%B8%ED%95%9C%EC%A3%BC%EA%B0%84%EB%B3%B4%ED%98%B8%EC%84%BC%ED%84%B0')}
+                className="w-full bg-white text-ink py-6 rounded-3xl font-bold text-xl flex items-center justify-center gap-4 hover:bg-lime-soft transition-all shadow-xl"
+              >
+                <MapPin className="w-7 h-7 text-lime-brand" /> 네이버 지도에서 정확한 위치 확인하기
+              </button>
+
+              {/* ⭐ 복구된 후기 보기 배너 ⭐ */}
+              <button 
+                onClick={() => setIsReviewOpen(true)}
+                className="w-full bg-lime-brand text-white py-6 rounded-3xl font-bold text-xl flex items-center justify-center gap-4 hover:bg-lime-dark transition-all shadow-xl mt-4"
+              >
+                <MessageSquare className="w-7 h-7" /> 가족보호자분들 후기 사진 보기
+              </button>
             </div>
           </div>
         </section>
