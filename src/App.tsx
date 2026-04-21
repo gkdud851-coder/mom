@@ -296,6 +296,73 @@ export default function App() {
           </div>
         </section>
 
+ {/* Daily Schedule Section */}
+        <section id="schedule" className="section-padding bg-warm-bg">
+          <div className="max-w-4xl mx-auto">
+            <SectionHeader 
+              subtitle="Daily Routine" 
+              title="순천맘편한의 하루일과" 
+            />
+            <div className="space-y-4">
+              {[
+                { time: '08:30 - 09:30', activity: '등원 및 건강체크', desc: '직접 어르신을 모시러 가며, 도착 후 혈압 및 체온을 체크합니다.' },
+                { time: '09:30 - 10:30', activity: '오전 간식 및 체조', desc: '가벼운 건강 간식과 함께 활기찬 아침 체조로 하루를 시작합니다.' },
+                { time: '10:30 - 12:00', activity: '맞춤형 프로그램', desc: '인지 자극 및 신체 재활 등 어르신별 맞춤 활동을 진행합니다.' },
+                { time: '12:00 - 13:00', activity: '영양 가득 점심 식사', desc: '전문 조리사가 정성껏 준비한 균형 잡힌 식사를 대접합니다.' },
+                { time: '13:00 - 14:00', activity: '휴식 및 낮잠', desc: '편안한 공간에서 충분한 휴식과 수면을 취하며 에너지를 보충합니다.' },
+                { time: '14:00 - 15:30', activity: '오후 신체/사회 활동', desc: '레크리에이션, 노래교실, 실버 요가 등 즐거운 사회 활동을 합니다.' },
+                { time: '15:30 - 16:30', activity: '오후 간식 및 상담', desc: '달콤한 오후 간식과 함께 어르신의 하루를 마무리하는 상담을 합니다.' },
+                { time: '16:30 - 17:30', activity: '정리 및 귀가', desc: '안전하게 댁까지 모셔다 드리는 송영 서비스를 시작합니다.' },
+              ].map((item, i) => (
+                <motion.div 
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1 }}
+                  key={i}
+                  className="bg-white p-6 rounded-3xl shadow-sm border border-black/5 flex flex-col md:flex-row md:items-center gap-4 md:gap-8"
+                >
+                  <div className="bg-lime-brand text-white px-4 py-1.5 rounded-full text-sm font-bold shrink-0 text-center md:w-32">
+                    {item.time}
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-bold mb-1">{item.activity}</h4>
+                    <p className="text-ink-muted text-sm">{item.desc}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section id="faq" className="section-padding bg-white">
+          <div className="max-w-4xl mx-auto">
+            <SectionHeader 
+              subtitle="Q&A" 
+              title="자주 묻는 질문" 
+            />
+            <div className="grid gap-4">
+              <FAQItem 
+                question="이용 대상은 어떻게 되나요?"
+                answer="노인장기요양보험 등급(1~5등급, 인지지원등급)을 받으신 어르신이면 누구나 이용 가능합니다. 아직 등급이 없으신 경우, 신청 절차부터 친절히 안내해 드립니다."
+              />
+              <FAQItem 
+                question="이용 비용은 얼마나 드나요?"
+                answer="국가에서 85~100%를 지원하며, 본인부담금은 등급과 이용 시간에 따라 차이가 있습니다. 일반 대상자는 약 15% 정도만 부담하시면 되며, 기초수급자나 의료급여 대상자는 더 큰 혜택이 있습니다."
+              />
+              <FAQItem 
+                question="셔틀 차량(송영 서비스)을 운행하나요?"
+                answer="네, 순천 전 지역 안전한 송영 서비스를 제공합니다. 이동이 불편하신 어르신도 계신 곳까지 직접 모시러 가고 안전하게 귀가를 도와드립니다."
+              />
+              <FAQItem 
+                question="식사와 간식은 어떻게 제공되나요?"
+                answer="매일 아침 엄선된 신선한 재료로 전문 조리사가 균형 잡힌 영양 식단과 간식을 준비합니다. 어르신의 건강 상태에 맞춰 세심하게 배식하고 있습니다."
+              />
+            </div>
+          </div>
+        </section>
+        
         {/* Contact Section */}
         <section id="contact" className="section-padding bg-ink text-white">
           <div className="max-w-3xl mx-auto">
