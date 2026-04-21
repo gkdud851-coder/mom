@@ -269,7 +269,7 @@ export default function App() {
                 { time: '13:00 - 14:00', activity: '휴식 및 낮잠', desc: '편안한 공간에서 충분한 휴식과 수면을 취하며 에너지를 보충합니다.' },
                 { time: '14:00 - 15:30', activity: '오후 신체/사회 활동', desc: '레크리에이션, 노래교실, 실버 요가 등 즐거운 사회 활동을 합니다.' },
                 { time: '15:30 - 16:30', activity: '오후 간식 및 상담', desc: '달콤한 오후 간식과 함께 어르신의 하루를 마무리하는 상담을 합니다.' },
-                { time: '16:30 - 17:30', activity: '정리 및 귀가', desc: '안전하게 댁까지 모셔다 드리는 송영 서비스를 시작합니다.' },
+                { time: '16:30 - 17:30', activity: '저녁 및 귀가', desc: '안전하게 댁까지 모셔다 드리는 송영 서비스를 시작합니다.' },
               ].map((item, i) => (
                 <motion.div key={i} initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="bg-white p-6 rounded-3xl shadow-sm border border-black/5 flex flex-col md:flex-row md:items-center gap-4 md:gap-8">
                   <div className="bg-lime-brand text-white px-4 py-1.5 rounded-full text-sm font-bold shrink-0 text-center md:w-32">{item.time}</div>
@@ -291,7 +291,7 @@ export default function App() {
               <FAQItem question="이용 대상은 어떻게 되나요?" answer="노인장기요양보험 등급(1~5등급, 인지지원등급)을 받으신 어르신이면 누구나 이용 가능합니다. 아직 등급이 없으신 경우, 만 65세 이상, 또는 만 65세 미만의 파킨슨병, 치매, 뇌졸중 및 노인성 질환을 앓으시는 경우에도 조기 신청이 가능합니다. 신청 절차부터 친절히 안내해 드립니다." />
               <FAQItem question="이용 비용은 얼마나 드나요?" answer="국가에서 85~100%를 지원하며, 본인부담금은 등급과 이용 시간에 따라 차이가 있습니다. 일반 대상자는 약 15% 정도만 부담하시면 되며, 기초수급자나 의료급여 대상자는 더 큰 혜택이 있습니다." />
               <FAQItem question="셔틀 차량(송영 서비스)을 운행하나요?" answer="네, 순천 전 지역 안전한 송영 서비스를 제공합니다. 이동이 불편하신 어르신도 계신 곳까지 직접 모시러 가고 안전하게 귀가를 도와드립니다." />
-              <FAQItem question="식사와 간식은 어떻게 제공되나요?" answer="매일 아침 엄선된 신선한 재료로 전문 조리사가 균형 잡힌 영양 식단과 간식을 준비합니다. 어르신의 건강 상태에 맞춰 세심하게 배식하고 있습니다." />
+              <FAQItem question="식사와 간식은 어떻게 제공되나요?" answer="매일 아침 엄선된 신선한 재료로 전문 조리사가 균형 잡힌 영양 식단과 간식을 준비합니다. 어르신의 건강 상태에 맞춰 세심하게 배식하고 있습니다. 특별한 것은 주 1회 어르신들에게 수요조사를 받아 특식을 제공드리고 있습니다." />
             </div>
           </div>
         </section>
